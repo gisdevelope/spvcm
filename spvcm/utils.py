@@ -99,7 +99,7 @@ def baltim(df=False):
     dataframe contains the raw data of the baltimore example
     """
     import geopandas
-    baltim = geopandas.read_files(pysal.examples.get_path('baltim.shp'))
+    baltim = geopandas.read_file(pysal.examples.get_path('baltim.shp'))
     coords = baltim[['X', 'Y']].values
     Y = np.log(baltim.PRICE.values).reshape(-1,1)
     Yz = Y - Y.mean()
