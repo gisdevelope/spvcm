@@ -19,6 +19,8 @@ before_install:
     - source activate test-env
     - conda install -y numpy scipy pandas six pip
     - conda install -y nose seaborn dill statsmodels geopandas
+    - conda install -c r r-essentials r-coda
+    - conda install rpy2
     - pip install pysal
 
 install:
